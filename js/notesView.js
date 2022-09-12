@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>My Journal</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
-    <script type="module" src='js/script.js'></script>
-</head>
-<body>
-    <div class="notes" id="app">
-        <!-- <div class="notes__sidebar">
+export default class notesView{
+    constructor(root, { onNoteSelect, onNoteAdd, onNoteEdit, onNoteDelete } = {});
+        this.root = root;
+        this.onNoteSelect = root;
+        this.onNoteAdd = root;
+        this.onNoteEdit = root;
+        this.onNoteDelete = root;
+        this.root.innerHTML =  
+            <div class="notes__sidebar">
             <button class="notes__add" type="button">Add New Entry</button>
             <div class="notes__list">
                 <div class="notes__list-item notes__list-item--selected">
@@ -22,8 +18,8 @@
         </div>
         <div class="notes__preview">
             <input class="notes__title" type="text" placeholder="Enter a Title">
-            <textarea class="notes__body">I am notes body</textarea> -->
+            <textarea class="notes__body">I am notes body</textarea>
         </div>
-    </div>
-</body>
-</html>
+        ;
+    }
+}
